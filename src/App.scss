@@ -1,0 +1,14 @@
+/* Normalize & vars */
+@import "styles/base/settings-color";
+@import "styles/base/settings-layout";
+@import "styles/base/settings-typography";
+
+/* Mixin */
+@import "styles/mixins/mixins";
+
+/* Base */
+@import "styles/base/fonts";
+@import "styles/base/initial";
+
+/* Main component */
+@import "styles/components/components";

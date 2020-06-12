@@ -1,0 +1,16 @@
+.weather-info_wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.weather-info_conditions {
+  width: 60vw;
+  margin: $gutter--large 0;
+  height: 40px;
+
+  &[condition="Clouds"] {
+    background-color: blue;
+  }
+}

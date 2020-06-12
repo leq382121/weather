@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color: $color--black;
+  font-family: $ff-Formular;
+  margin: 0 auto;
+  overflow-x: unset;
+}
+
+// Default styling
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+  }
+}

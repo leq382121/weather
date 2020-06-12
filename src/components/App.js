@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../App.css";
+import "../App.scss";
 import { V_API_URL } from "../constants/global";
 import LocationSelect from "../components/LocationSelect";
 import Cloud from "../components/WeatherInfo";

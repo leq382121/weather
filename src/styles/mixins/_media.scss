@@ -1,0 +1,79 @@
+// How to use:
+// SCSS:
+// @include media($medium up) { /* style */ };
+// CSS output:
+// @media screen and (min-width: 768px) { /* style */ };
+// stylelint-disable
+
+@mixin media($mediaQuery: null, $mediaQuery2: null) {
+  @if length($mediaQuery2) >= 2 {
+    $type: nth($mediaQuery, 2);
+    $output: nth($mediaQuery, 1);
+    $type2: nth($mediaQuery2, 2);
+    $output2: nth($mediaQuery2, 1);
+
+    @if $type=="up" {
+      $output: "min-width:" $output;
+    }
+
+    @else if $type=="down" {
+      $output: "max-width:" $output;
+    }
+
+    @if $type2=="up" {
+      $output2: "min-width:" $output2;
+    }
+
+    @else if $type2=="down" {
+      $output2: "max-width:" $output2;
+    }
+
+    @media screen and (#{$output}) and (#{$output2}) {
+      @content;
+
+    }
+  }
+
+  @else if length($mediaQuery) >= 2 {
+    $type: nth($mediaQuery, 2);
+    $output: nth($mediaQuery, 1);
+
+    @if $type=="up" {
+      $output: "min-width:" $output;
+    }
+
+    @else if $type=="down" {
+      $output: "max-width:" $output;
+    }
+
+    @if length($mediaQuery) == 3 {
+      @if nth($mediaQuery, 3) == "landscape" or nth($mediaQuery, 3) == "portrait" {
+        $orientation: "orientation:" nth($mediaQuery, 3);
+
+        @media (#{$orientation}) and (#{$output}) {
+          @content;
+
+        }
+      }
+    }
+
+    @else {
+      @media screen and (#{$output}) {
+        @content;
+
+      }
+    }
+  }
+
+  @else if length($mediaQuery) == 1 {
+    @if $mediaQuery == "landscape" or $mediaQuery == "portrait" {
+      $orientation: "orientation:" $mediaQuery;
+
+      @media (#{$orientation}) {
+        @content;
+
+      }
+    }
+  }
+}
+// stylelint-enable

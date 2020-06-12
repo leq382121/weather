@@ -1,0 +1,15 @@
+/* Normalize & vars */
+@import "../../node_modules/normalize.css/normalize.css";
+@import "../base/settings-color";
+@import "../base/settings-layout";
+@import "../base/settings-typography";
+
+/* Mixin */
+@import "../mixins/mixins";
+
+/* Base */
+@import "../base/fonts";
+@import "../base/initial";
+
+/* Main component */
+@import "../components/components";
