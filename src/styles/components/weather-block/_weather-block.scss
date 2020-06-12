@@ -8,6 +8,8 @@
   &_conditions {
     width: 60vw;
     margin: $gutter--large 0;
+    animation-duration: 0.3s;
+    animation-name: slidein;
 
     &[condition="Clouds"] {
       .icon::after {
@@ -22,10 +24,25 @@
   }
 
   &_temp-wind {
+    animation-duration: 0.6s;
+    animation-name: slidein;
+
     .weather-info_current-temp {
       font-size: $fs-large;
       font-weight: $fw-slim;
       padding-left: 12px;
+    }
+  }
+
+  @keyframes slidein {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0px);
     }
   }
 }
