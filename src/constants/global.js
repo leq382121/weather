@@ -1,3 +1,9 @@
-const API_URL = "https://api.meteo.lt/v1";
+// Variables
+const V_API_URL = "http://localhost:3010/orai";
 
-export { API_URL };
+// Functions
+const F_KELVIN_TO_CELCIUS = (k) => {
+  return k - 273.15;
+};
+
+export { V_API_URL, F_KELVIN_TO_CELCIUS };

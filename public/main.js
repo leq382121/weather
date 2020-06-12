@@ -3,6 +3,7 @@ const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 
 const path = require("path");
+const os = require("os");
 const isDev = require("electron-is-dev");
 
 let mainWindow;
@@ -16,7 +17,12 @@ function createWindow() {
   );
   if (isDev) {
     // Open the DevTools.
-    //BrowserWindow.addDevToolsExtension('<location to your react chrome extension>');
+    // BrowserWindow.addDevToolsExtension(
+    //   path.join(
+    //     os.homedir() +
+    //       "/Library/Application Support/Google/Chrome/Default/Extensions/fmkadmapgofadopljbjfkapdkoienihi/4.7.0_0"
+    //   )
+    // );
     mainWindow.webContents.openDevTools();
   }
   mainWindow.on("closed", () => (mainWindow = null));
