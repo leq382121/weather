@@ -1,16 +1,31 @@
-.weather-info_wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-}
+.weather-info {
+  &_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-.weather-info_conditions {
-  width: 60vw;
-  margin: $gutter--large 0;
-  height: 40px;
+  &_conditions {
+    width: 60vw;
+    margin: $gutter--large 0;
 
-  &[condition="Clouds"] {
-    background-color: blue;
+    &[condition="Clouds"] {
+      .icon::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 60vw;
+        background: $color-sun;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &_temp-wind {
+    .weather-info_current-temp {
+      font-size: $fs-large;
+      font-weight: $fw-slim;
+      padding-left: 12px;
+    }
   }
 }

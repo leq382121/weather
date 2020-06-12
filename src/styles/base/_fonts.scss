@@ -1,17 +1,80 @@
-// @font-face {
-//   font-family: Formular;
-//   font-style: normal;
-//   font-weight: 400;
-//   src: url("/../assets/Formular-regular.ttf") format("truetype");
-//   text-rendering: optimizeLegibility;
-// }
+@font-face {
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/OpenSans-Bold.ttf") format("truetype");
+  text-rendering: optimizeLegibility;
+}
 
-// @font-face {
-//   font-family: Formular;
-//   font-style: italic;
-//   font-weight: 400;
-//   src: url("../../assets/Formular-italic.ttf") format("truetype");
-//   text-rendering: optimizeLegibility;
-// }
+@font-face {
+  font-family: OpenSans;
+  font-style: italic;
+  font-weight: 700;
+  src: url("../assets/OpenSans-BoldItalic.ttf") format("truetype");
+  text-rendering: optimizeLegibility;
+}
 
-$ff-Formular: "Formular", sans-serif;
+@font-face {
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: 800;
+  src: url("../assets/OpenSans-ExtraBold.ttf") format("truetype");
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: OpenSans;
+  font-style: italic;
+  font-weight: 800;
+  src: url("../assets/OpenSans-ExtraBoldItalic.ttf") format("truetype");
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-style: italic;
+  font-weight: 500;
+  src: url("../assets/OpenSans-Italic.ttf") format("truetype");
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/OpenSans-Light.ttf") format("truetype");
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-style: italic;
+  font-weight: 400;
+  src: url("../assets/OpenSans-LightItalic.ttf") format("truetype");
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/OpenSans-Regular.ttf") format("truetype");
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: 600;
+  src: url("../assets/OpenSans-SemiBold.ttf") format("truetype");
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-style: italic;
+  font-weight: 600;
+  src: url("../assets/OpenSans-SemiBoldItalic.ttf") format("truetype");
+  text-rendering: optimizeLegibility;
+}
+
+$ff-OpenSans: "OpenSans", sans-serif;

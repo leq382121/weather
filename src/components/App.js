@@ -3,12 +3,13 @@ import "../App.scss";
 import { V_API_URL } from "../constants/global";
 import LocationSelect from "../components/LocationSelect";
 import Cloud from "../components/WeatherInfo";
+import Header from "../components/Header";
 
 // chosen city hook to be used as prop
 // if city shown, hide select
 
 function App() {
-  const [isLocationSelected, setIsLocationSelected] = useState(true); //future of the app
+  const [isLocationSelected] = useState(true); //future of the app
   const [isWeatherLoaded, setIsWeatherLoaded] = useState(false);
   // const [isPlace, setIsPlace] = useState("vilnius");
   const [isWeather, setIsWeather] = useState({});
@@ -32,7 +33,8 @@ function App() {
     <div className="main">
       {isLocationSelected ? (
         isWeatherLoaded ? (
-          <Cloud currentWeather={isWeather} />
+          ((<Header location={isWeather.name} />),
+          (<Cloud currentWeather={isWeather} />))
         ) : (
           <p>loading weather ... </p>
         )

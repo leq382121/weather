@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 import App from "./components/App";
 import * as serviceWorker from "./serviceWorker";
 
-import "./index.scss";
 import "normalize.css";
+import "./index.scss";
 
 ReactDOM.render(
   <React.StrictMode>
