@@ -1,7 +1,7 @@
 {
   "name": "weather",
   "version": "0.1.0",
-  "main": "public/main.js",
+  "main": "electron/main.js",
   "homepage": "./",
   "private": true,
   "dependencies": {
@@ -17,10 +17,15 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start-el": "export BROWSER=none && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron-dev": "concurrently \"BROWSER=none npm run start\" \"wait-on http://localhost:3000 && electron .\""
+    "electron-dev": "concurrently \"BROWSER=none npm run start\" \"wait-on http://localhost:3000 && electron .\"",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "build-electron": "mkdir build/src && cp -r electron/. build/electron && cp -r src/shared/. build/src/shared",
+    "package": "electron-builder build --mac --win -c.extraMetadata.main=build/electron/main.js --publish never"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,6 +41,22 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "build": {
+    "appId": "liutauras.weather",
+    "extends": null,
+    "mac": {
+      "category": "liutauras.weather"
+    },
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "publish": {
+      "provider": "github",
+      "repo": "electron-cra",
+      "owner": "liutauras"
+    }
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
