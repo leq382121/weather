@@ -32,7 +32,7 @@ function App() {
     <div className="main">
       {isLocationSelected ? (
         isWeatherLoaded ? (
-          <Cloud currentWeather={isWeather.main} />
+          <Cloud currentWeather={isWeather} />
         ) : (
           <p>loading weather ... </p>
         )
